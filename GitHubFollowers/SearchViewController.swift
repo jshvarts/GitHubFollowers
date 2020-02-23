@@ -26,6 +26,12 @@ class SearchViewController: UIViewController {
     configureLogoImageView()
     configureTextField()
     configureCallToActionButton()
+    createDismissKeyboardTabGesture()
+  }
+  
+  private func createDismissKeyboardTabGesture() {
+    let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+    view.addGestureRecognizer(tap)
   }
   
   private func configureLogoImageView() {
@@ -45,6 +51,7 @@ class SearchViewController: UIViewController {
   
   private func configureTextField() {
     view.addSubview(usernameTextField)
+    usernameTextField.delegate = self
     
     NSLayoutConstraint.activate([
       usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
@@ -63,5 +70,12 @@ class SearchViewController: UIViewController {
       callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
       callToActionButton.heightAnchor.constraint(equalToConstant: 50)
     ])
+  }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    print("should return")
+    return true
   }
 }
