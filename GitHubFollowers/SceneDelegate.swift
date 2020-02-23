@@ -19,12 +19,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
+    let searchNavController = UINavigationController(rootViewController: SearchViewController())
+    let favoritesNavController = UINavigationController(rootViewController: FavoritesViewController())
+
+    let tabBar = UITabBarController()
+    tabBar.viewControllers = [searchNavController, favoritesNavController]
+    
     // fill up entire screen
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     
     // every window can has a window scene
     window?.windowScene = windowScene
-    window?.rootViewController = ViewController()
+    window?.rootViewController = tabBar
     window?.makeKeyAndVisible()
   }
   
