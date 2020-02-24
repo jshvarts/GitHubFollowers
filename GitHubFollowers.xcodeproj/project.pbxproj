@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A65EE5C24040C500040ABF5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65EE5B24040C500040ABF5 /* UIViewController+Ext.swift */; };
 		1A75111F2401C9AF00503D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75111E2401C9AF00503D6C /* AppDelegate.swift */; };
 		1A7511212401C9AF00503D6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7511202401C9AF00503D6C /* SceneDelegate.swift */; };
 		1A7511282401C9B200503D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7511272401C9B200503D6C /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A65EE5B24040C500040ABF5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		1A75111B2401C9AF00503D6C /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A75111E2401C9AF00503D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A7511202401C9AF00503D6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				1A8E36C024037477002F7C11 /* GFTitleLabel.swift */,
 				1A8E36C2240378C4002F7C11 /* GFBodyLabel.swift */,
 				1A8E36C424037A01002F7C11 /* GFAlertViewController.swift */,
+				1A65EE5B24040C500040ABF5 /* UIViewController+Ext.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				1A8E36C524037A01002F7C11 /* GFAlertViewController.swift in Sources */,
 				1A751139240303CA00503D6C /* GFTextField.swift in Sources */,
 				1A7511332402270C00503D6C /* SearchViewController.swift in Sources */,
+				1A65EE5C24040C500040ABF5 /* UIViewController+Ext.swift in Sources */,
 				1A8E36BF2403425F002F7C11 /* FollowersViewController.swift in Sources */,
 				1A7511372402E62000503D6C /* GFButton.swift in Sources */,
 				1A8E36C3240378C4002F7C11 /* GFBodyLabel.swift in Sources */,

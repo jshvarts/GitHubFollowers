@@ -50,7 +50,7 @@ class GFAlertViewController: UIViewController {
     containerView.translatesAutoresizingMaskIntoConstraints = false
     
     NSLayoutConstraint.activate([
-      containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
       containerView.widthAnchor.constraint(equalToConstant: 280),
       containerView.heightAnchor.constraint(equalToConstant: 220)
@@ -64,7 +64,7 @@ class GFAlertViewController: UIViewController {
     NSLayoutConstraint.activate([
       titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
       titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
-      titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: padding),
+      titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
       titleLabel.heightAnchor.constraint(equalToConstant: 28)
     ])
   }

@@ -78,7 +78,7 @@ class SearchViewController: UIViewController {
   // invoked in case go is tapped or Get Followers is tapped
   @objc private func pushFollowersViewController() {
     guard isUsernameEntered else {
-      print("username not entered")
+      presentGFAlertOnMainThread(title: "Empty username", message: "Please enter username. We need to know who to look for 😀", buttonTitle: "Ok")
       return
     }
 
