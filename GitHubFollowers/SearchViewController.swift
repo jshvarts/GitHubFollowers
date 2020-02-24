@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
   let usernameTextField = GFTextField()
   let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
   
+  var isUsernameEntered: Bool { !usernameTextField.text!.isEmpty }
+  
   // hide navigation bar every time screen is displayed not when it loaded initially in viewDidLoad
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -63,6 +65,7 @@ class SearchViewController: UIViewController {
   
   private func configureCallToActionButton() {
     view.addSubview(callToActionButton)
+    callToActionButton.addTarget(self, action: #selector(pushFollowersViewController), for: .touchUpInside)
     
     NSLayoutConstraint.activate([
       callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -71,11 +74,26 @@ class SearchViewController: UIViewController {
       callToActionButton.heightAnchor.constraint(equalToConstant: 50)
     ])
   }
+  
+  // invoked in case go is tapped or Get Followers is tapped
+  @objc private func pushFollowersViewController() {
+    guard isUsernameEntered else {
+      print("username not entered")
+      return
+    }
+
+    let followersViewController = FollowersViewController()
+    followersViewController.username = usernameTextField.text
+    followersViewController.title = usernameTextField.text
+
+    navigationController?.pushViewController(followersViewController, animated: true)
+  }
 }
 
 extension SearchViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    print("should return")
+    usernameTextField.resignFirstResponder()
+    pushFollowersViewController()
     return true
   }
 }

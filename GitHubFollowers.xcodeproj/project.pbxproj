@@ -15,6 +15,7 @@
 		1A751135240227B100503D6C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A751134240227B100503D6C /* FavoritesViewController.swift */; };
 		1A7511372402E62000503D6C /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7511362402E62000503D6C /* GFButton.swift */; };
 		1A751139240303CA00503D6C /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A751138240303CA00503D6C /* GFTextField.swift */; };
+		1A8E36BF2403425F002F7C11 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8E36BE2403425F002F7C11 /* FollowersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1A751134240227B100503D6C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1A7511362402E62000503D6C /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		1A751138240303CA00503D6C /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		1A8E36BE2403425F002F7C11 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				1A7511272401C9B200503D6C /* Assets.xcassets */,
 				1A7511292401C9B200503D6C /* LaunchScreen.storyboard */,
 				1A75112C2401C9B200503D6C /* Info.plist */,
+				1A8E36BE2403425F002F7C11 /* FollowersViewController.swift */,
 				1A7511322402270C00503D6C /* SearchViewController.swift */,
 				1A751134240227B100503D6C /* FavoritesViewController.swift */,
 				1A7511362402E62000503D6C /* GFButton.swift */,
@@ -145,6 +148,7 @@
 			files = (
 				1A751139240303CA00503D6C /* GFTextField.swift in Sources */,
 				1A7511332402270C00503D6C /* SearchViewController.swift in Sources */,
+				1A8E36BF2403425F002F7C11 /* FollowersViewController.swift in Sources */,
 				1A7511372402E62000503D6C /* GFButton.swift in Sources */,
 				1A75111F2401C9AF00503D6C /* AppDelegate.swift in Sources */,
 				1A751135240227B100503D6C /* FavoritesViewController.swift in Sources */,

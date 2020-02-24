@@ -31,6 +31,7 @@ class GFTextField: UITextField {
     font = UIFont.preferredFont(forTextStyle: .title2) // dynamic font
     adjustsFontSizeToFitWidth = true
     minimumFontSize = 12
+    autocapitalizationType = .none
     
     backgroundColor = .tertiarySystemBackground
     autocorrectionType = .no
