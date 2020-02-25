@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
   // hide navigation bar every time screen is displayed not when it loaded initially in viewDidLoad
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.isNavigationBarHidden = true
+    navigationController?.setNavigationBarHidden(true, animated: true)
   }
   
   override func viewDidLoad() {
