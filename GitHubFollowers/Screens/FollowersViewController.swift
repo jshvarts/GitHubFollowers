@@ -11,9 +11,11 @@ import UIKit
 class FollowersViewController: UIViewController {
   
   var username: String!
+  var collectionView: UICollectionView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    configureCollectionView()
     view.backgroundColor = .systemBackground
     navigationController?.navigationBar.prefersLargeTitles = true
     
@@ -30,5 +32,13 @@ class FollowersViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.setNavigationBarHidden(false, animated: true)
+  }
+  
+  private func configureCollectionView() {
+    // fill up the view (use view.bounds)
+    collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+    view.addSubview(collectionView)
+    collectionView.backgroundColor = .systemPink
+    collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseId)
   }
 }
