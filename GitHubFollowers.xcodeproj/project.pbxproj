@@ -26,6 +26,7 @@
 		1ABD59C324062C800098960F /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59C224062C800098960F /* ErrorMessage.swift */; };
 		1ABD59C624074D320098960F /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59C524074D320098960F /* FollowerCell.swift */; };
 		1ABD59C824074E9A0098960F /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59C724074E9A0098960F /* GFAvatarImageView.swift */; };
+		1ABD59CA2409339D0098960F /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59C92409339D0098960F /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		1ABD59C224062C800098960F /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		1ABD59C524074D320098960F /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		1ABD59C724074E9A0098960F /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		1ABD59C92409339D0098960F /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1ABD59C224062C800098960F /* ErrorMessage.swift */,
+				1ABD59C92409339D0098960F /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				1A751139240303CA00503D6C /* GFTextField.swift in Sources */,
 				1A7511332402270C00503D6C /* SearchViewController.swift in Sources */,
 				1A65EE5C24040C500040ABF5 /* UIViewController+Ext.swift in Sources */,
+				1ABD59CA2409339D0098960F /* UIHelper.swift in Sources */,
 				1ABD59C824074E9A0098960F /* GFAvatarImageView.swift in Sources */,
 				1A8E36BF2403425F002F7C11 /* FollowersViewController.swift in Sources */,
 				1A7511372402E62000503D6C /* GFButton.swift in Sources */,
