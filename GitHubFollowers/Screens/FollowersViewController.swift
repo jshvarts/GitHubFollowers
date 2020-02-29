@@ -54,9 +54,9 @@ class FollowersViewController: UIViewController {
     showLoadingView()
     // [weak self] aka capture list in closure to avoid memory leaks
     NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
-      #warning("dismiss loading view")
       guard let self = self else { return }
-      
+      self.dismissLoadingView()
+
       switch result {
       case .success(let followers):
         if followers.count < 100 { self.hasMoreFollowers = false }
