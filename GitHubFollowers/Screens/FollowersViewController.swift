@@ -51,8 +51,10 @@ class FollowersViewController: UIViewController {
   }
     
   private func getFollowers(username: String, page: Int) {
+    showLoadingView()
     // [weak self] aka capture list in closure to avoid memory leaks
     NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
+      #warning("dismiss loading view")
       guard let self = self else { return }
       
       switch result {
