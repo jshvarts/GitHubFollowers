@@ -49,18 +49,26 @@ class FollowersViewController: UIViewController {
     collectionView.backgroundColor = .systemBackground
     collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseId)
   }
-    
+  
   private func getFollowers(username: String, page: Int) {
     showLoadingView()
     // [weak self] aka capture list in closure to avoid memory leaks
     NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
       guard let self = self else { return }
       self.dismissLoadingView()
-
+      
       switch result {
       case .success(let followers):
         if followers.count < 100 { self.hasMoreFollowers = false }
         self.followers.append(contentsOf: followers)
+        
+        // isEmpty is more efficient than .count == 0
+        if self.followers.isEmpty {
+          let message = "This user does not have any followers. Go follow them 😄"
+          self.showEmptyStateView(with: message, in: self.view)
+          return
+        }
+        
         self.updateData()
         
       case .failure(let error):
