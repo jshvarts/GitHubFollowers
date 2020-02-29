@@ -9,7 +9,6 @@
 import UIKit
 
 class FollowersViewController: UIViewController {
-  
   // enums are Hashable by default
   enum Section {
     case main
@@ -17,6 +16,7 @@ class FollowersViewController: UIViewController {
   
   var username: String!
   var followers: [Follower] = []
+  var filteredFollowers: [Follower] = []
   var page = 1
   var hasMoreFollowers = true
   
@@ -27,6 +27,7 @@ class FollowersViewController: UIViewController {
     super.viewDidLoad()
     configureViewController()
     configureCollectionView()
+    configureSearchController()
     getFollowers(username: username, page: page)
     configureDataSource()
   }
@@ -50,6 +51,13 @@ class FollowersViewController: UIViewController {
     collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseId)
   }
   
+  private func configureSearchController() {
+    let searchController = UISearchController()
+    searchController.searchResultsUpdater = self
+    searchController.searchBar.placeholder = "search for a username"
+    navigationItem.searchController = searchController
+  }
+  
   private func getFollowers(username: String, page: Int) {
     showLoadingView()
     // [weak self] aka capture list in closure to avoid memory leaks
@@ -69,7 +77,7 @@ class FollowersViewController: UIViewController {
           return
         }
         
-        self.updateData()
+        self.updateData(on: self.followers)
         
       case .failure(let error):
         self.presentGFAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "Ok")
@@ -85,7 +93,7 @@ class FollowersViewController: UIViewController {
     })
   }
   
-  private func updateData() {
+  private func updateData(on followers: [Follower]) {
     var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
     snapshot.appendSections([.main])
     snapshot.appendItems(followers)
@@ -110,5 +118,15 @@ extension FollowersViewController: UICollectionViewDelegate {
       page += 1
       getFollowers(username: username, page: page)
     }
+  }
+}
+
+extension FollowersViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+    filteredFollowers = followers.filter {
+      $0.login.lowercased().contains(filter.lowercased())
+    }
+    updateData(on: filteredFollowers)
   }
 }
