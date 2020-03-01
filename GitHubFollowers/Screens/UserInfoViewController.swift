@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol UserInfoViewControllerDelegate: class {
+  func didTapGitHubProfile()
+  func didTapGetFollowers()
+}
+
 class UserInfoViewController: UIViewController {
   
   let headerView = UIView()
@@ -37,17 +42,27 @@ class UserInfoViewController: UIViewController {
       
       switch result {
       case .success(let user):
-        DispatchQueue.main.async {
-          self.add(childViewController: GFUserInfoHeaderViewController(user: user), to: self.headerView)
-          self.add(childViewController: GFRepoItemViewController(user: user), to: self.itemViewOne)
-          self.add(childViewController: GFFollowerItemViewController(user: user), to: self.itemViewTwo)
-          self.dateLabel.text = "GitHub member since \(user.createdAt.convertToDisplayFormat())"
-        }
+        self.configureUIElements(with: user)
         
       case .failure(let error):
-        self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+        self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
         break
       }
+    }
+  }
+  
+  private func configureUIElements(with user: User) {
+    DispatchQueue.main.async {
+      let repoViewController = GFRepoItemViewController(user: user)
+      repoViewController.delegate = self
+      
+      let followerViewController = GFFollowerItemViewController(user: user)
+      followerViewController.delegate = self
+      
+      self.add(childViewController: repoViewController, to: self.itemViewOne)
+      self.add(childViewController: followerViewController, to: self.itemViewTwo)
+      self.add(childViewController: GFUserInfoHeaderViewController(user: user), to: self.headerView)
+      self.dateLabel.text = "GitHub member since \(user.createdAt.convertToDisplayFormat())"
     }
   }
   
@@ -92,5 +107,15 @@ class UserInfoViewController: UIViewController {
       dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: margin),
       dateLabel.heightAnchor.constraint(equalToConstant: 18)
     ])
+  }
+}
+
+extension UserInfoViewController: UserInfoViewControllerDelegate {
+  func didTapGitHubProfile() {
+    print("show safari view controller")
+  }
+  
+  func didTapGetFollowers() {
+    print("dismiss and tell followers screen new username")
   }
 }
