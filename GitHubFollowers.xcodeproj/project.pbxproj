@@ -33,6 +33,7 @@
 		1ABD59DA240B48B40098960F /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59D9240B48B40098960F /* GFSecondaryTitleLabel.swift */; };
 		1ABD59DC240B53BC0098960F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59DB240B53BC0098960F /* Constants.swift */; };
 		1ABD59DE240B62A90098960F /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59DD240B62A90098960F /* GFItemInfoView.swift */; };
+		1ABD59E0240B70960098960F /* GFItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59DF240B70960098960F /* GFItemInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		1ABD59D9240B48B40098960F /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		1ABD59DB240B53BC0098960F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1ABD59DD240B62A90098960F /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
+		1ABD59DF240B70960098960F /* GFItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				1A8E36C424037A01002F7C11 /* GFAlertViewController.swift */,
 				1ABD59D7240B481B0098960F /* GFUserInfoHeaderViewController.swift */,
+				1ABD59DF240B70960098960F /* GFItemInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				1ABD59D2240AB8BC0098960F /* GFEmptyStateView.swift in Sources */,
 				1A65EE682404D2B10040ABF5 /* NetworkManager.swift in Sources */,
 				1A75111F2401C9AF00503D6C /* AppDelegate.swift in Sources */,
+				1ABD59E0240B70960098960F /* GFItemInfoViewController.swift in Sources */,
 				1ABD59D4240B192B0098960F /* UserInfoViewController.swift in Sources */,
 				1A751135240227B100503D6C /* FavoritesViewController.swift in Sources */,
 				1A7511212401C9AF00503D6C /* SceneDelegate.swift in Sources */,
