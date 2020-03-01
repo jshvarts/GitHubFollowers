@@ -32,6 +32,7 @@
 		1ABD59D8240B481B0098960F /* GFUserInfoHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59D7240B481B0098960F /* GFUserInfoHeaderViewController.swift */; };
 		1ABD59DA240B48B40098960F /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59D9240B48B40098960F /* GFSecondaryTitleLabel.swift */; };
 		1ABD59DC240B53BC0098960F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59DB240B53BC0098960F /* Constants.swift */; };
+		1ABD59DE240B62A90098960F /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD59DD240B62A90098960F /* GFItemInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		1ABD59D7240B481B0098960F /* GFUserInfoHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderViewController.swift; sourceTree = "<group>"; };
 		1ABD59D9240B48B40098960F /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		1ABD59DB240B53BC0098960F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1ABD59DD240B62A90098960F /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1ABD59D1240AB8BC0098960F /* GFEmptyStateView.swift */,
+				1ABD59DD240B62A90098960F /* GFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				1ABD59C824074E9A0098960F /* GFAvatarImageView.swift in Sources */,
 				1A8E36BF2403425F002F7C11 /* FollowersViewController.swift in Sources */,
 				1ABD59D8240B481B0098960F /* GFUserInfoHeaderViewController.swift in Sources */,
+				1ABD59DE240B62A90098960F /* GFItemInfoView.swift in Sources */,
 				1A7511372402E62000503D6C /* GFButton.swift in Sources */,
 				1ABD59C624074D320098960F /* FollowerCell.swift in Sources */,
 				1A8E36C3240378C4002F7C11 /* GFBodyLabel.swift in Sources */,
