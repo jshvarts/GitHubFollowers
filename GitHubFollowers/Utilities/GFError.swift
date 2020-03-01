@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GitHubFollowers
 //
-//  Created by James Shvarts on 2/25/20.
+//  Created by James Shvarts on 2/29/20.
 //  Copyright © 2020 James Shvarts. All rights reserved.
 //
 
