@@ -16,7 +16,8 @@ class GFItemInfoViewController: UIViewController {
   let actionButton = GFButton()
   
   var user: User!
-  var delegate: UserInfoViewControllerDelegate!
+  // delegates should be weak to avoid retain cycles
+  weak var delegate: UserInfoViewControllerDelegate!
   
   init(user: User) {
     super.init(nibName: nil, bundle: nil)

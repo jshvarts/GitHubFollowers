@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FollowersViewControllerDelegate: class {
+  func didRequestFollowers(for username: String)
+}
+
 class FollowersViewController: UIViewController {
   // enums are Hashable by default
   enum Section {
@@ -103,6 +107,13 @@ class FollowersViewController: UIViewController {
       self.dataSource.apply(snapshot, animatingDifferences: true)
     }
   }
+  
+  private func resetFollowers() {
+    page = 1
+    followers.removeAll()
+    filteredFollowers.removeAll()
+    collectionView.setContentOffset(.zero, animated: true) // scroll to the top
+  }
 }
 
 extension FollowersViewController: UICollectionViewDelegate {
@@ -128,6 +139,7 @@ extension FollowersViewController: UICollectionViewDelegate {
     
     let userInfoController = UserInfoViewController()
     userInfoController.username = follower.login
+    userInfoController.delegate = self
     let navController = UINavigationController(rootViewController: userInfoController)
     present(navController, animated: true)
   }
@@ -146,5 +158,15 @@ extension FollowersViewController: UISearchResultsUpdating, UISearchBarDelegate 
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     updateData(on: followers)
     isSearching = false
+  }
+}
+
+extension FollowersViewController: FollowersViewControllerDelegate {
+  func didRequestFollowers(for username: String) {
+    print("didRequestFollowers for username \(username)")
+    self.username = username
+    title = username
+    resetFollowers()
+    getFollowers(username: username, page: 1)
   }
 }
