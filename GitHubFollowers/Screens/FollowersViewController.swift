@@ -45,6 +45,9 @@ class FollowersViewController: UIViewController {
   private func configureViewController() {
     view.backgroundColor = .systemBackground
     navigationController?.navigationBar.prefersLargeTitles = true
+    
+    let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+    navigationItem.rightBarButtonItem = addButton
   }
   
   private func configureCollectionView() {
@@ -114,6 +117,33 @@ class FollowersViewController: UIViewController {
     filteredFollowers.removeAll()
     collectionView.setContentOffset(.zero, animated: true) // scroll to the top
   }
+  
+  @objc func addButtonTapped() {
+    showLoadingView()
+    
+    NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
+      guard let self = self else { return }
+      self.dismissLoadingView()
+      
+      switch result {
+      case .success(let user):
+        
+        let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+        
+        PersistenceManager.updateWidth(favorite: favorite, actionType: .add) { [weak self] error in
+          guard let self = self else { return }
+          
+          guard let error = error else {
+            return self.presentGFAlert(title: "Success!", message: "You have successfully favorited this user 🎉", buttonTitle: "Hooray!")
+          }
+          self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+          
+        }
+      case .failure(let error):
+        self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+      }
+    }
+  }
 }
 
 extension FollowersViewController: UICollectionViewDelegate {
@@ -163,7 +193,6 @@ extension FollowersViewController: UISearchResultsUpdating, UISearchBarDelegate 
 
 extension FollowersViewController: FollowersViewControllerDelegate {
   func didRequestFollowers(for username: String) {
-    print("didRequestFollowers for username \(username)")
     self.username = username
     title = username
     resetFollowers()
