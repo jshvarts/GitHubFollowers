@@ -24,31 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     // every window can has a window scene
     window?.windowScene = windowScene
-    window?.rootViewController = createTabBar()
+    window?.rootViewController = GFTabBarController()
     window?.makeKeyAndVisible()
     
     configureNavigationBar()
-  }
-  
-  func createSearchNavigationController() -> UINavigationController {
-    let searchNavigationController = SearchViewController()
-    searchNavigationController.title = "Search"
-    searchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-    return UINavigationController(rootViewController: searchNavigationController)
-  }
-  
-  func createFavoritesNavigationController() -> UINavigationController {
-    let favoritesNavigationController = FavoritesViewController()
-    favoritesNavigationController.title = "Favorites"
-    favoritesNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-    return UINavigationController(rootViewController: favoritesNavigationController)
-  }
-  
-  func createTabBar() -> UITabBarController {
-    let tabBar = UITabBarController()
-    UITabBar.appearance().tintColor = .systemGreen
-    tabBar.viewControllers = [createSearchNavigationController(), createFavoritesNavigationController()]
-    return tabBar
   }
   
   func configureNavigationBar() {
