@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class FavoritesViewController: GFDataLoadingViewController {
   
   let tableView = UITableView()
   var favorites: [Follower] = []
@@ -79,7 +79,7 @@ extension FavoritesViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let favorite = favorites[indexPath.row]
-    let desinationViewController = FollowersViewController(username: favorite.login)    
+    let desinationViewController = FollowersViewController(username: favorite.login)
     navigationController?.pushViewController(desinationViewController, animated: true)
   }
   

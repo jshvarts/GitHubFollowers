@@ -42,6 +42,7 @@
 		1AF997F3240CA6CD0073984A /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F2240CA6CD0073984A /* FavoriteCell.swift */; };
 		1AF997F6240E8AD00073984A /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F5240E8AD00073984A /* GFTabBarController.swift */; };
 		1AF997F8240F43DA0073984A /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F7240F43DA0073984A /* GFAlertContainerView.swift */; };
+		1AF997FA240F55410073984A /* GFDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F9240F55410073984A /* GFDataLoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		1AF997F2240CA6CD0073984A /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		1AF997F5240E8AD00073984A /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		1AF997F7240F43DA0073984A /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
+		1AF997F9240F55410073984A /* GFDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				1ABD59E5240BEA550098960F /* ItemInfoViewControllers */,
 				1A8E36C424037A01002F7C11 /* GFAlertViewController.swift */,
 				1ABD59D7240B481B0098960F /* GFUserInfoHeaderViewController.swift */,
+				1AF997F9240F55410073984A /* GFDataLoadingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				1ABD59E4240BE9910098960F /* GFFollowerItemViewController.swift in Sources */,
 				1ABD59E2240BE6B80098960F /* GFRepoItemViewController.swift in Sources */,
 				1ABD59DC240B53BC0098960F /* Constants.swift in Sources */,
+				1AF997FA240F55410073984A /* GFDataLoadingViewController.swift in Sources */,
 				1ABD59C824074E9A0098960F /* GFAvatarImageView.swift in Sources */,
 				1A8E36BF2403425F002F7C11 /* FollowersViewController.swift in Sources */,
 				1ABD59D8240B481B0098960F /* GFUserInfoHeaderViewController.swift in Sources */,
