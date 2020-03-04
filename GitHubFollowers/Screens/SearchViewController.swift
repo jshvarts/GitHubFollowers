@@ -46,11 +46,9 @@ class SearchViewController: UIViewController {
     
     let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
     
-    logoImageViewTopConstraint = logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant)
-    logoImageViewTopConstraint.isActive = true
-    
     // each view generally needs 4 constraints
     NSLayoutConstraint.activate([
+      logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant),
       logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       logoImageView.heightAnchor.constraint(equalToConstant: 200),
       logoImageView.widthAnchor.constraint(equalToConstant: 200)
@@ -90,7 +88,7 @@ class SearchViewController: UIViewController {
     
     usernameTextField.resignFirstResponder()
     
-    let followersViewController = FollowersViewController(username: usernameTextField.text!)    
+    let followersViewController = FollowersViewController(username: usernameTextField.text!)
     navigationController?.pushViewController(followersViewController, animated: true)
   }
 }
