@@ -110,15 +110,16 @@ class UserInfoViewController: UIViewController {
   }
 }
 
-extension UserInfoViewController: ItemInfoViewControllerDelegate {
+extension UserInfoViewController: GFRepoItemViewControllerDelegate {
   func didTapGitHubProfile(for user: User) {
     guard let profileUrl = URL(string: user.htmlUrl) else {
       return self.presentGFAlert(title: "Inalid URL", message: "The URL attached to this user is invalid", buttonTitle: "Ok")
     }
-    
     presentSafariViewController(with: profileUrl)
   }
-  
+}
+
+extension UserInfoViewController: GFFollowerViewControllerDelegate {
   func didTapGetFollowers(for user: User) {
     guard user.followers != 0 else {
       return self.presentGFAlert(title: "No followers", message: "This user has no followers 😞", buttonTitle: "Ok")
