@@ -124,7 +124,7 @@ class FollowersViewController: GFDataLoadingViewController {
     page = 1
     followers.removeAll()
     filteredFollowers.removeAll()
-    collectionView.setContentOffset(.zero, animated: true) // scroll to the top
+    collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
   }
   
   @objc func addButtonTapped() {
