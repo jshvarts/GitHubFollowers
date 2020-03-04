@@ -57,8 +57,7 @@ class GFItemInfoViewController: UIViewController {
   @objc func actionButtonTapped() {} // to be overriden by subsclasses
   
   private func layoutUI() {
-    view.addSubview(stackView)
-    view.addSubview(actionButton)
+    view.addSubviews(stackView, actionButton)
     
     stackView.translatesAutoresizingMaskIntoConstraints = false
     

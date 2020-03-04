@@ -43,6 +43,7 @@
 		1AF997F6240E8AD00073984A /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F5240E8AD00073984A /* GFTabBarController.swift */; };
 		1AF997F8240F43DA0073984A /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F7240F43DA0073984A /* GFAlertContainerView.swift */; };
 		1AF997FA240F55410073984A /* GFDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F9240F55410073984A /* GFDataLoadingViewController.swift */; };
+		1AF997FC240FD1150073984A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997FB240FD1150073984A /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		1AF997F5240E8AD00073984A /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		1AF997F7240F43DA0073984A /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		1AF997F9240F55410073984A /* GFDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingViewController.swift; sourceTree = "<group>"; };
+		1AF997FB240FD1150073984A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				1A65EE5B24040C500040ABF5 /* UIViewController+Ext.swift */,
 				1A5D4810240BEEF300FA6FB1 /* Date+Ext.swift */,
 				1A5D4812240BEF0800FA6FB1 /* String+Ext.swift */,
+				1AF997FB240FD1150073984A /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				1A75111F2401C9AF00503D6C /* AppDelegate.swift in Sources */,
 				1ABD59E0240B70960098960F /* GFItemInfoViewController.swift in Sources */,
 				1ABD59D4240B192B0098960F /* UserInfoViewController.swift in Sources */,
+				1AF997FC240FD1150073984A /* UIView+Ext.swift in Sources */,
 				1A751135240227B100503D6C /* FavoritesViewController.swift in Sources */,
 				1A7511212401C9AF00503D6C /* SceneDelegate.swift in Sources */,
 			);
