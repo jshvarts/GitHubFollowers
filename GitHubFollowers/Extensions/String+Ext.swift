@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+  // not used in this project due to JSON decoder date strategy
   func convertToDate() -> Date? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"

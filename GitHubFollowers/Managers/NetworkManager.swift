@@ -80,6 +80,7 @@ class NetworkManager {
       do {
         let decoder = JSONDecoder() // Codable was introduced in Swift 4.2
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .iso8601
         let user = try decoder.decode(User.self, from: data)
         completed(.success(user))
       } catch {
