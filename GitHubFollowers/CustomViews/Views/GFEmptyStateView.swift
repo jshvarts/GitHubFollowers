@@ -22,11 +22,9 @@ class GFEmptyStateView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  // todo refactor to use convenience initializer
-  init(message: String) {
-    super.init(frame: .zero)
+  convenience init(message: String) {
+    self.init(frame: .zero)
     messageLabel.text = message
-    configure()
   }
   
   private func configure() {
