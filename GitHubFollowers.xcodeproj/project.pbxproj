@@ -44,6 +44,7 @@
 		1AF997F8240F43DA0073984A /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F7240F43DA0073984A /* GFAlertContainerView.swift */; };
 		1AF997FA240F55410073984A /* GFDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997F9240F55410073984A /* GFDataLoadingViewController.swift */; };
 		1AF997FC240FD1150073984A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997FB240FD1150073984A /* UIView+Ext.swift */; };
+		1AF997FE240FE46E0073984A /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF997FD240FE46E0073984A /* UITableView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		1AF997F7240F43DA0073984A /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		1AF997F9240F55410073984A /* GFDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingViewController.swift; sourceTree = "<group>"; };
 		1AF997FB240FD1150073984A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		1AF997FD240FE46E0073984A /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				1A5D4810240BEEF300FA6FB1 /* Date+Ext.swift */,
 				1A5D4812240BEF0800FA6FB1 /* String+Ext.swift */,
 				1AF997FB240FD1150073984A /* UIView+Ext.swift */,
+				1AF997FD240FE46E0073984A /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				1ABD59C624074D320098960F /* FollowerCell.swift in Sources */,
 				1A8E36C3240378C4002F7C11 /* GFBodyLabel.swift in Sources */,
 				1ABD59D6240B43D80098960F /* GFError.swift in Sources */,
+				1AF997FE240FE46E0073984A /* UITableView+Ext.swift in Sources */,
 				1A65EE632404CA2E0040ABF5 /* Follower.swift in Sources */,
 				1AF997F8240F43DA0073984A /* GFAlertContainerView.swift in Sources */,
 				1A8E36C124037477002F7C11 /* GFTitleLabel.swift in Sources */,
