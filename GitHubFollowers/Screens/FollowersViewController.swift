@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol FollowersViewControllerDelegate: class {
-  func didRequestFollowers(for username: String)
-}
-
 class FollowersViewController: GFDataLoadingViewController {
   // enums are Hashable by default
   enum Section {
@@ -201,7 +197,7 @@ extension FollowersViewController: UISearchResultsUpdating {
   }
 }
 
-extension FollowersViewController: FollowersViewControllerDelegate {
+extension FollowersViewController: UserInfoViewControllerDelegate {
   func didRequestFollowers(for username: String) {
     self.username = username
     title = username

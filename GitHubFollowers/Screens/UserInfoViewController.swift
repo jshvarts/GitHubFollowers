@@ -9,8 +9,7 @@
 import UIKit
 
 protocol UserInfoViewControllerDelegate: class {
-  func didTapGitHubProfile(for user: User)
-  func didTapGetFollowers(for user: User)
+  func didRequestFollowers(for username: String)
 }
 
 class UserInfoViewController: UIViewController {
@@ -22,7 +21,7 @@ class UserInfoViewController: UIViewController {
   var itemViews: [UIView] = []
   
   var username: String!
-  weak var delegate: FollowersViewControllerDelegate!
+  weak var delegate: UserInfoViewControllerDelegate!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -111,7 +110,7 @@ class UserInfoViewController: UIViewController {
   }
 }
 
-extension UserInfoViewController: UserInfoViewControllerDelegate {
+extension UserInfoViewController: ItemInfoViewControllerDelegate {
   func didTapGitHubProfile(for user: User) {
     guard let profileUrl = URL(string: user.htmlUrl) else {
       return self.presentGFAlert(title: "Inalid URL", message: "The URL attached to this user is invalid", buttonTitle: "Ok")
