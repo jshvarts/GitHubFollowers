@@ -53,11 +53,8 @@ class UserInfoViewController: UIViewController {
   
   private func configureUIElements(with user: User) {
     DispatchQueue.main.async {
-      let repoViewController = GFRepoItemViewController(user: user)
-      repoViewController.delegate = self
-      
-      let followerViewController = GFFollowerItemViewController(user: user)
-      followerViewController.delegate = self
+      let repoViewController = GFRepoItemViewController(user: user, delegate: self)
+      let followerViewController = GFFollowerItemViewController(user: user, delegate: self)
       
       self.add(childViewController: repoViewController, to: self.itemViewOne)
       self.add(childViewController: followerViewController, to: self.itemViewTwo)
